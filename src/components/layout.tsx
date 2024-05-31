@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { Toaster } from "~/components/ui/toaster"
 
 type Props = {
   children: ReactNode;
@@ -18,6 +19,7 @@ export default function Layout({ children }: Props) {
         <NextThemesProvider attribute="class" defaultTheme="dark" enableSystem>
           {children}
         </NextThemesProvider>
+        <Toaster />
       </main>
     </>
   );
